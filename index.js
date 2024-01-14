@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 
 app.get('/api/time', (req, res) => {
     const date = new Date();
-    res.send(date.toGMTString());
+    res.json({ currentTime: date.toGMTString() });
 });
 
 app.listen(port, '0.0.0.0', () => {
